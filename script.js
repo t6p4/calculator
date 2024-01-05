@@ -2,7 +2,7 @@ let result = document.querySelector("p");
 let number = document.querySelectorAll(".number")
 let operator = document.querySelectorAll(".operator")
 let equals = document.querySelector(".equals")
-let clear = document.querySelectorAll("clear")
+let clear = document.querySelectorAll(".clear")
 
 result.textContent = 0
 
@@ -10,6 +10,20 @@ let var1 = 0;
 let var2 = 0;
 let init = false
 let op = "";
+
+clear.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+        if (e.target.textContent == "CE") {
+            result.textContent = result.textContent.slice(1)
+        } else {
+            result.textContent = "";
+            var1 = 0;
+            var2 = 0;
+            init = false;
+            op = "";
+        }
+    })
+})
 
 
 
