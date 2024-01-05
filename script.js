@@ -46,6 +46,15 @@ operator.forEach((n) => {
     })
 })
 
+equals.addEventListener("click", (e) => {
+    if (!var1) {
+        return
+    } else {
+        var2 = Number(result.textContent)
+        calculate(op)
+    }
+})
+
 function calculate(op, ...calc) {
     calc.pop()
     calc.push(var1, var2)
